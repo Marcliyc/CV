@@ -1,16 +1,9 @@
-%% Sometimes when a section can't be nicely modelled with the \entry[]... mechanism; hack our own
-\makerubrichead{Research Publications}
-
-%% Assuming you've already given \addbibresource{own-bib.bib} in the main doc. Right? Right???
-\nocite{*}
-
-%% If you just want everything in one list
-% \printbibliography[heading={none}]
-
-\printbibliography[heading={subbibliography},title={Journal Articles},type=article]
-
-\printbibliography[heading={subbibliography},title={Conference Proceedings},type=inproceedings]
-
-\printbibliography[heading={subbibliography},title={Books and Chapters},filter={booksandchapters}]
-
-
+\begin{rubric}{Publications}
+\entry*[ICML 2025]%
+	\textbf{Discrepancies are Virtue: Weak-to-Strong Generalization through Lens of Intrinsic Dimension}\\
+	Research project at NYU (advised by Prof. Qi Lei and Prof. Jason D. Lee), Aug 2024 -- Jan 2025.\\
+	arXiv: \url{https://arxiv.org/abs/2502.05075} \quad GitHub: \url{https://github.com/Marcliyc/weak-to-strong}\\
+	Designed and analyzed a statistical framework linking weak-to-strong generalization scaling laws to intrinsic/correlation dimensions, predicting performance with $<3\%$ error across parameter and sample-size scaling.\\
+	Built a PyTorch/Transformers/Timm framework spanning 6 datasets and about 30 teacher--student pairs (LLaMA, Qwen, Swin, etc.) on vision and language tasks.\\
+	Designed an algorithm to estimate correlation dimensions between billion-parameter models, reducing memory usage by six orders of magnitude.
+\end{rubric}
